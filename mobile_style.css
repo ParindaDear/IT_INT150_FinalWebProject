@@ -1,0 +1,1390 @@
+body {
+    font-family: "Gotham SSm A", "Gotham SSm B", helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------------------------------------
+   เริ่ม SECTION 1 Navbar สีเทาที่อยู่บนสุด
+-----------------------------------------*/
+
+#header {
+    position: sticky;
+    top: 0; 
+    z-index: 3; /*เพื่อให้แน่ใจว่า header จะไม่ถูกบังโดย element อื่นๆ */
+    background-color: #f3f5f6;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+#header .lock {
+    display: flex;
+    align-items: center; 
+    padding-left: 18px;
+    height: 40px;
+}
+
+#header a .underline .text, 
+#header button .underline .text {
+    padding-bottom: 3px;
+    background-size: 0 2px;
+    background-repeat: no-repeat; /*เพื่อทำให้เส้นใต้มันเป็นเส้น ไม่งั้นมันจะเป็นกรอบ*/
+    background-position: bottom left;
+    background-image: linear-gradient( to right, #0075bb 0%, #0075bb 100% );
+    transition: background-size 0.25s; /*transition ของ nav ทั้ง 2 อัน*/
+}
+
+#header a:hover .underline .text, /*สร้าง effect ขีดเส้นใต้*/
+#header a:focus .underline .text, 
+#header button:hover .underline .text,
+#header button:focus .underline .text {
+     background-size: 100% 2px;
+}
+
+
+#header .hours {
+    display: flex;
+    align-items: center; 
+}
+
+#header .hours {
+    white-space: nowrap; /*เพื่อให้ Today's Hours 9 AM - 6 PM แสดงผลเป็นกลุ่มก้อนเดียวกันเสมอ ไม่แตกกระจายขึ้นบรรทัดใหม่*/
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #012a3a;
+}
+
+#header .hours .today {
+    display: none;
+}
+
+
+#header .hours .range {
+    font-weight: 700;
+    margin-left: 0.5em;
+}
+
+
+#header .tickets { /*ปุ่ม tickets mobile ขวาบน*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 35px;
+    margin-left: auto;
+    margin-right: 0;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #0075bb;
+    text-decoration: none;
+    transition: background-color 0.25s;
+}
+
+#header .tickets:hover,
+#header .tickets:focus {
+    background-color: #012a3a;
+}
+
+#header nav,
+#top-toggle-search {
+  display: none;
+}
+
+/*-------------------------------
+ เริ่ม SECTION 2 Navbar ใหญ่ ที่มี logo
+---------------------------------*/
+#header .principal {
+    z-index: 2;
+    background-color: #fff;
+}
+
+#header .principal .lock {
+    height: 64px;
+    padding: 0 16px;
+}
+
+#header .home img {
+    display: block;
+    height: 23px;
+    width: auto;
+}
+
+#principal-toggle-search, /* แสดงปุ่ม Search และ Menu ใน Mobile  */
+#toggle-menu {
+    background: none;
+    border: none;
+    padding: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#principal-toggle-search img,
+#toggle-menu img {
+   height: 20px;
+   width: 20px;
+}
+
+#menu { /* ทำให้พวก visit, explore, support ซ่อนใน mobile  */ 
+    display: none;  
+} 
+
+/*----------------------------------
+ เริ่ม SECTION 3 page-content-wrapper
+------------------------------------*/
+.title-section {
+    background-color: #012a3a;
+    background-image: url(images/topographic-dark-translucent.svg);
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.content-overlay {
+    padding: 24px 16px;
+    color: #fff;
+}
+
+.content-overlay h1 {
+    font-size: 34px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+.content-overlay h2 {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 800;
+    margin-top: 25px;
+}
+
+.sidebar-container {
+    background-color: #001e2b;
+    background-image: url(images/topographic-dark-translucent.svg);
+    color: #fff;
+}
+
+#toggle-sidebar-anchors {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 22px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.icon {
+    background-image: url('images/v-icon.png');
+    display: inline-block;
+    width: 14px;
+    height: 15px;
+    margin-left: 168px;
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
+
+.sidebar-nav {
+    display: none;
+}
+
+/*--------------------------------------
+    เริ่ม SECTION 4 exhibits-section
+----------------------------------------*/
+.exhibits-section { 
+  margin-top: 90px;
+  line-height: 1.6;
+  background-color: #f5f7f8;
+  background-image: url(images/topographic-dark-translucent.svg);
+  padding: 40px 0 0 0;
+}
+
+.exhibits-container {
+  max-width: 1200px;
+  padding: 0 15px; 
+  width: 100%;
+}
+
+.button-ex {
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.button-outline {
+  border-color: #001e2b;
+  color: #001e2b;
+}
+
+.button-outline:hover {
+  background-color: #0075bb;
+  border-color: #0075bb;
+  color: #fff;
+}
+
+.button-learn {
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  position: relative; 
+}
+
+.button-learn:hover {
+    background-color: #0075bb;
+    border-color: #0075bb;
+}
+
+.exhibits-section .exhibits-container { 
+    padding: 0; 
+    max-width: 100%; 
+}
+
+.exhibits-text-content {
+  padding: 0 20px 40px 20px; 
+}
+
+.medium-text {
+  font-size: 12px;
+  margin-bottom: 8px;
+  margin-left: 10px;
+  font-weight: 700;
+  color: #012a3a;
+  letter-spacing: 4px;
+}
+
+.section-heading {
+  font-size: 28px; 
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-top: 0;
+  font-weight: 790;
+  color: #012a3a;
+  line-height: 1.2;
+}
+
+.section-description {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  letter-spacing: 1.2px;
+  line-height: 1.8;
+  padding: 0 10px; 
+  color: #012a3a;
+}
+
+.exhibits-image-grid {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.exhibit-card {
+  position: relative; /*ถ้าไม่ตั้งเมื่อ element ลูกถูกตั้งค่า position: absolute; มันจะหลุดออกจาก normal flow */
+  width: 100%;
+  box-sizing: border-box; 
+  background-color: #fff; 
+  color: #1a2a4d;
+}
+
+.exhibit-card.large-card-ex.harbor-wetland {
+    background-image: 
+      linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.001) 100%),
+      url(images/harbor-wetland.webp);
+    background-size: cover;
+    background-position: center;
+    height: 530px; 
+    color: #fff;
+    /*การจัดเรียงเนื้อหาภายในด้วย Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.large-card-ex .card-content {
+    padding: 30px;
+}
+
+.large-card-ex h3 {
+    margin-bottom: 1px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.large-card-ex p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+ .large-card-ex .button-learn {
+     padding-left: 15px;
+     padding-right: 15px;
+     padding-bottom: 3px;
+     padding-top: 3px;
+     font-size: 13px;
+     font-weight: 800;
+     letter-spacing: 0.5px;
+     margin-left: 1px;
+ }
+
+.exhibit-card.small-card {
+    display: flex;
+    align-items: center;
+    min-height: 100px; /*ความสูงเเต่ละช่องเล็ก*/
+    padding: 0; 
+    padding-left: 90px;
+}
+
+.exhibit-card.small-card a {
+    text-decoration: none;
+    padding: 0 13px; /*padding รหว่างรูปด้านซ้าย*/
+    color: #012a3a;
+    font-size: 18.4px;
+    font-weight: 700;
+}
+
+.exhibit-card.small-card.odd {
+    background-color: #f8f9fa;
+}
+
+/*เพื่อสร้าง รูปภาพขนาดย่อ (thumbnail) ที่จะแสดงผลทางด้านซ้ายของแต่ละ .exhibit-card.small-card*/
+.exhibit-card.small-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 90px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.upland-rainforest::before { background-image: url(images/upland-tropical.webp); }
+.australia-wild::before { background-image: url(images/australia-turtle.webp); }
+.blacktip-reef::before { background-image: url(images/blacktip-reef.webp); }
+.jellies-invasion::before { background-image: url(images/jellies.webp); }
+.shark-alley::before { background-image: url(images/shark_alley.webp); }
+
+
+.exhibit-card.small-card a .underline .card-name { 
+    display: inline; 
+    padding-bottom: 3px;                         
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    background-size: 0 2px;
+    background-image: linear-gradient(to right, #0075bb 0%, #0075bb 100%); 
+    transition: background-size 0.25s, color 0.25s; 
+}
+
+.exhibit-card.small-card a:active .underline .card-name,
+.exhibit-card.small-card a:focus .underline .card-name {
+    color: #0075bb; 
+    background-size: 100% 2px; 
+}
+
+
+.exhibit-card.small-card::after { /* Arrow */
+  content: "";
+  display: block;
+  position: absolute;
+  right: 13px; /*ระยะห่างของ arrow กับขอบด้านซ้าย*/
+  top: 50%;
+  transform: translateY(-50%); /*เพื่อให้ลูกศรอยู่กึ่งกลาง*/
+  width: 15px;
+  height: 28px;
+  background-image: url('images/arrow-right-icon1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/*-------------------------------------------
+    เริ่ม SECTION 5 tour-experience-section
+---------------------------------------------*/
+.tour-experience-section {
+    margin-top: 90px;
+}
+
+.experience-section {
+    color: #ffffff;
+    padding: 18px; 
+    padding-bottom: 60px;
+    width: 100%;
+    position: relative; /*ทำให้ .experience-section กลายเป็น containing block สำหรับ element ลูกของมันที่มี position: absolute;*/
+}
+
+.experience-section::before { /*::before เพื่อสร้าง พื้นหลังสีน้ำเงิน */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #012a3a;
+    width: 1256px;
+}
+
+.experience-container {
+    display: flex; /*เพื่อให้ส่วนการ์ดใน desktop มันอยู่ขวาของก้อนข้อความ (แนว row)*/
+    flex-direction: column; 
+    position: relative;
+}
+
+.experience-info {
+    flex-basis: auto; /* Allow natural height */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+    padding-top: 35px;
+}
+
+.experience-info .section-subtitle {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.experience-info h2 {
+    font-size: 30px; 
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.experience-info p {
+    padding-right: 41.5px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.experience-info .btn-tours {
+    display: inline-block;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    margin-bottom: 55px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.experience-info .btn-tours:hover {
+    background-color: #0075bb;
+    color: #ffffff;
+    border-color: #0075bb;
+}
+
+.carousel-nav { 
+    display: none;
+}
+
+.experience-carousel {
+    display: flex; /*เพื่อให้ใน mobile การ์ดมันเป็นเเนวนอน*/
+    overflow: hidden;
+    gap: 25px;
+    margin-right: -30px; /*ตำแหน่งลูกศรสีขาวเล็ก*/
+    margin-left: -5px;
+    position: relative; 
+}
+
+.experience-card {
+    background-color: #ffffff;
+    color: #333333;
+    overflow: hidden;
+    width: 280px;
+    flex-shrink: 0; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.experience-card img {
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+}
+
+.experience-card-content {
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+}
+
+.experience-card .card-day {
+    font-size: 13px;
+    letter-spacing: 3px ;
+    color: #777777;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.experience-card .card-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #012a3a;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.experience-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #777777;
+    margin-top: auto;
+    padding-top: 30px;
+}
+
+.experience-card-footer .card-date {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.experience-card-footer .card-date-icon {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+.experience-card-footer .card-status-icon {
+    background-image: url('images/$-icon.png');
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    padding: 7px;
+}
+
+.mobile-carousel-nav-container { /*กรอบครึงสีขาวของลูกศร*/
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 40px;
+    height: 100%;
+}
+
+.mobile-carousel-next { /*ลูกศรในกรอบสีขาว*/
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background-color: white;
+    color: #012a3a;
+    border: none;
+    border-radius: 50% 0 0 50%;
+    width: 55px;
+    height: 60px;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+
+/*---------------------------------
+    เริ่ม SECTION 6 animal-section
+-----------------------------------*/
+.animal-section { 
+  margin-top: 90px;
+  line-height: 1.6;
+  background-color: #f5f7f8;
+  background-image: url(images/topographic-dark-translucent.svg);
+  padding: 50px 0 0 0;
+}
+
+.animal-container {
+  max-width: 1200px; 
+  padding: 0 15px; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.button-ani {
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.button-outline {
+  border-color: #001e2b;
+  color: #001e2b;
+}
+
+.button-outline:hover {
+  background-color: #0075bb;
+  border-color: #0075bb;
+  color: #fff;
+}
+
+.button-learn {
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  position: relative; 
+}
+
+.button-learn:hover {
+  background-color: #0075bb;
+  border-color: #0075bb;
+}
+
+.animal-section .animal-container { 
+  padding: 0; 
+  max-width: 100%; 
+}
+
+.animal-main {
+  display: block;
+}
+
+.animal-text-content {
+  padding: 0 20px 40px 20px; 
+}
+
+.medium-animal-text {
+  font-size: 11px;
+  margin-bottom: 8px;
+  margin-left: 10px;
+  font-weight: 800;
+  color: #012a3a;
+  letter-spacing: 4px;
+}
+
+.animal-section-heading {
+  font-size: 30px; 
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-top: 0;
+  font-weight: 790;
+  color: #012a3a;
+  line-height: 1.2;
+}
+
+.animal-section-description {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  letter-spacing: 1.2px;
+  line-height: 1.8;
+  padding: 0 10px; 
+  color: #012a3a;
+}
+
+.animal-image-grid {
+  display: block; 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.animal-card {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff; 
+  color: #1a2a4d; 
+}
+
+
+.animal-card.large-card-ani.atlantic-puffin {
+    background-image: 
+      linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.001) 100%),
+      url(images/atlantic-puffin.webp);
+    background-size: cover;
+    background-position: center;
+    height: 535px; 
+    color: #fff; 
+    /* การจัดเรียงเนื้อหาภายในด้วย Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.animal-card.large-card-ani .animal-card-content {
+    padding: 30px;
+}
+
+.animal-card.large-card-ani h3 {
+    margin-bottom: -5px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.animal-card.large-card-ani p {
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.animal-card.large-card-ani i {
+    font-weight: 600;
+}
+
+.animal-card.large-card-ani .button-learn {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-left: 1px;
+ }
+
+.animal-card.small-card {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    padding: 0; 
+    padding-left: 90px; 
+}
+
+.animal-card.small-card a {
+    text-decoration: none; 
+    padding: 0 16px; 
+    color: #012a3a; 
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.animal-card.small-card.odd {
+    background-color: #f8f9fa;
+}
+
+.animal-card.small-card::before { /* Thumbnail */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 95px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.blacktip2::before { background-image: url(images/blacktip2.webp); }
+.blue-blubber::before { background-image: url(images/blue-blubber.webp); }
+.yellow-tang::before { background-image: url(images/yellow-tang.webp); }
+
+
+.animal-card.small-card a .underline .animal-card-name { 
+    display: inline; 
+    padding-bottom: 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    background-size: 0 2px;
+    background-image: linear-gradient(to right, #0075bb 0%, #0075bb 100%); 
+    transition: background-size 0.25s, color 0.25s; 
+}
+
+.animal-card.small-card a:active .underline .animal-card-name,
+.animal-card.small-card a:focus .underline .animal-card-name {
+    color: #ffffff; 
+    background-size: 100% 2px; 
+}
+
+
+.animal-card.small-card::after { /* Arrow */
+  content: "";
+  display: block;
+  position: absolute;
+  right: 13px; /*ระยะห่างของ arrow กับขอบด้านซ้าย*/
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 28px;
+  background-image: url('images/arrow-right-icon1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.animal-card.small-card  i { 
+    display: none;
+}
+
+
+
+/*--------------------------------
+    เริ่ม SECTION 7 live-section
+----------------------------------*/
+.live-section { 
+  margin-top: 45px;
+  line-height: 1.6;
+  padding: 40px 0 0 0;
+}
+
+.live-container {
+  max-width: 1200px; /* จำกัดความกว้างสูงสุด */
+  padding: 0 15px; /* Default padding */
+  width: 100%;
+}
+
+.button-live {
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.button-outline {
+  border-color: #001e2b;
+  color: #001e2b;
+}
+
+.button-outline:hover {
+  background-color: #0075bb;
+  border-color: #0075bb;
+  color: #fff;
+}
+
+.button-watch {
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: relative; 
+}
+
+.button-watch:hover {
+    background-color: #0075bb;
+    border-color: #0075bb;
+}
+
+.live-section .live-container { 
+    padding: 0; 
+    max-width: 100%; 
+}
+
+
+.live-text-content {
+  padding: 0 20px 40px 20px; 
+}
+
+.medium-live-text {
+  font-size: 12px;
+  margin-bottom: 8px;
+  margin-left: 10px;
+  font-weight: 700;
+  color: #012a3a;
+  letter-spacing: 4px;
+}
+
+.live-section-heading {
+  font-size: 32px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-top: 0;
+  font-weight: 700;
+  color: #012a3a;
+  line-height: 1.2;
+}
+
+.live-section-description {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  letter-spacing: 1.2px;
+  line-height: 1.8;
+  padding: 0 10px; 
+  color: #012a3a;
+}
+
+
+.live-image-grid {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* --- Exhibit Card Base (Mobile) --- */
+.live-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff; 
+  color: #1a2a4d;
+}
+
+.live-card.large-card-live.blacktip-reef {
+    background-image: 
+        linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.001) 100%),
+        url(images/blacktip-reef.webp);
+    background-size: cover;
+    background-position: 30%;
+    height: 530px;
+    color: #fff;  
+    /*การจัดเรียงเนื้อหาภายในด้วย Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.large-card-live .live-card-content {
+    padding: 30px;
+}
+
+.large-card-live h3 {
+    margin-bottom: 9px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.large-card-live p {
+    margin-bottom: -35px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    line-height: 1.5;
+}
+
+ .large-card-live .button-watch {
+     padding-left: 15px;
+     padding-right: 15px;
+     padding-bottom: 5px;
+     padding-top: 5px;
+     font-size: 13px;
+     font-weight: 800;
+     letter-spacing: 0.5px;
+     margin-left: 1px;
+
+ }
+
+
+.live-card.small-card {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    height: auto;
+    padding: 0; 
+    padding-left: 90px; 
+}
+
+.live-card.small-card a {
+    text-decoration: none ; 
+    padding: 0 13px; 
+    color: #012a3a;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.live-card.small-card.odd {
+    background-color: #f8f9fa;
+}
+
+.live-card.small-card::before { /* Thumbnail */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 90px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.pacific::before { background-image: url(images/pacific.webp); }
+.jellies::before { background-image: url(images/jellies.webp); }
+
+
+.live-card.small-card  p {
+  display: none;
+}
+
+.live-card.small-card a .underline .live-card-name { 
+    display: inline; 
+    padding-bottom: 3px; 
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    background-size: 0 2px;
+    background-image: linear-gradient(to right, #0075bb 0%, #0075bb 100%); 
+    transition: background-size 0.25s, color 0.25s; 
+}
+
+.live-card.small-card a:active .underline .live-card-name,
+.live-card.small-card a:focus .underline .live-card-name {
+    color: #0075bb; 
+    background-size: 100% 2px;
+}
+
+
+.live-card.small-card::after { /* Arrow */
+  content: "";
+  display: block;
+  position: absolute;
+  right: 13px;  /*ระยะห่างของ arrow กับขอบด้านซ้าย*/
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 28px;
+  background-image: url('images/arrow-right-icon1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+
+
+/*--------------------------
+    เริ่ม FOOTER
+----------------------------*/
+footer {
+    margin-top: 90px;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mid-container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.last-container {
+    width: 90%;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-signup {
+    background-color: #0075bb;
+    background-image: url('images/topographic-dark-translucent.svg');
+    background-repeat: repeat;
+    color: #ffffff;
+    padding: 50px 15px;
+}
+
+.newsletter-eyebrow {
+    max-width: 200px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0 0 15px 0;
+    line-height: 20px;
+}
+
+.newsletter-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 30px 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #1e293b;
+    padding: 8px 40px;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.newsletter-button:hover,
+.newsletter-button:focus {
+    background-color: #012a3a;
+    color: white;
+    outline: none;
+}
+
+
+.site-footer {
+    background-color: #012a3a; 
+    color: #ffffff;
+    padding-top: 40px; 
+}
+
+.footer-content {
+    margin-top: 35px;
+    margin-bottom: 70px;
+}
+
+.footer-logo {
+    text-align: center; 
+    margin-bottom: 25px;
+}
+
+.footer-logo img {
+    max-width: 330px; 
+    height: auto;
+    display: inline-block; 
+}
+
+.footer-text p {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 19px;
+    line-height: 1.6;
+    margin-left: 2px;
+    color: #a0bdc6;
+}
+
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15); 
+    margin-top: 30px;
+    margin-bottom: 0; 
+}
+
+
+.footer-navigation {
+    padding-top: 65px; 
+}
+
+.footer-column {
+    margin-bottom: 90px;
+}
+
+.footer-column:last-child {
+    margin-bottom: 0; 
+}
+
+.footer-heading {
+    color: #ffffff;
+    font-size: 18px; 
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    display: flex; /* สำหรับ arrow alignment */
+    justify-content: space-between; /* ให้ลูกศรดันไปขวา */
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.mobile-arrow {
+    width: 15px;
+    height: 20px;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 25px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.footer-links-list li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-links-list a {
+    color: #a0bdc6; 
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.list-item-arrow { 
+    font-size: 1.5em; 
+    font-weight: 800;
+    color: #a0bdc6; 
+    flex-shrink: 0; 
+}
+
+.footer-actions .footer-button {
+    display: block; 
+    width: 100%;
+    max-width: 200px; 
+    margin: 0 auto 15px auto; 
+    padding: 7px 0;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-actions .footer-button-primary {
+    background-color: #ffffff;
+    color: #0c232b; 
+    border: 2px solid #ffffff;
+}
+
+.footer-actions .footer-button-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.footer-actions .footer-button-primary:hover,
+.footer-actions .footer-button-secondary:hover {
+    background-color: #0075bb;
+    border-color: #0075bb;
+    color: white;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.social-icons li a {
+    color: #ffffff;
+    display: inline-block; 
+}
+
+.social-icons li a img { 
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    opacity: 0.7;
+    padding-bottom: 3px;
+    background-size: 0 2px;
+    background-repeat: no-repeat; 
+    background-position: bottom left;
+    background-image: linear-gradient( to right, #ffffff 0%, #ffffff 100% );
+    transition: background-size 0.25s; 
+    text-decoration: none;
+}
+
+.social-icons li a:hover img,
+.social-icons li a:focus img {
+    opacity: 1;
+     background-size: 100% 2px;
+}
+
+
+.bottom-bar {
+    background-color: #001e2b;
+    color: #a0bdc6;
+    padding: 20px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 60px;
+}
+
+
+.bottom-bar-item {
+    display: block;
+    margin-bottom: 30px;
+    text-align: left;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.bottom-bar-item:last-child { 
+    margin-bottom: 0;
+}
+
+.bottom-bar-item.lang-links a {
+    margin-right: 15px;
+}
+
+.bottom-bar a {
+    color: #a0bdc6;
+    text-decoration: none;
+}
+
+/* ซ่อนตัวคั่น | ในหน้าจอ Mobile */
+.desktop-separator {
+    display: none;
+}
+
+.footer-heading .underline-foot,
+.footer-links-list li a .underline-foot,
+.bottom-bar-item a .underline-foot {
+    padding-bottom: 3px;
+    background-size: 0 2px;
+    background-repeat: no-repeat; 
+    background-position: bottom left;
+    background-image: linear-gradient( to right, #ffffff 0%, #ffffff 100% );
+    transition: background-size 0.25s;
+    text-decoration: none;
+}
+
+.footer-heading:hover .underline-foot,
+.footer-heading:focus .underline-foot,
+.footer-links-list li a:hover .underline-foot,
+.footer-links-list li a:focus .underline-foot,
+.bottom-bar-item a:hover .underline-foot,
+.bottom-bar-item a:focus .underline-foot {
+    background-size: 100% 2px;
+    text-decoration: none;
+    color: #ffff;
+}
+
+

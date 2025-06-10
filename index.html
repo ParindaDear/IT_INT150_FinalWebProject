@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Aquarium - Explore</title>
+    <link rel="stylesheet" href="mobile_style.css"> 
+    <link rel="stylesheet" href="desktop_style.css">
+</head>
+<body>
+    <header id="header">
+<!---------------------------------------
+   เริ่ม SECTION 1 Navbar สีเทาที่อยู่บนสุด
+----------------------------------------->
+        <section class="top">
+            <div class="lock">
+                <div class="hours">
+                    <div class="label">
+                        <span class="today">TODAY'S</span>
+                        <span> HOURS</span>
+                    </div>
+                    <div class="range">
+                        <span> 9 AM - </span>
+                        <span> &nbsp;6 PM</span>
+                    </div>
+                </div>
+
+                <a class="tickets" href="https://cart.aqua.org/webstore/shop/viewitems.aspx?cg=nai&c=ga">
+                    Tickets
+                </a>
+
+                <nav>
+                    <a href="https://aqua.org/support/donate">
+                      <span class="underline">
+                        <span class="text">GIVE TODAY</span>
+                      </span>
+                    </a>
+                    <a href="https://aqua.org/support/membership">
+                      <span class="underline">
+                        <span class="text">MEMBERSHIP</span>
+                      </span>
+                    </a>
+                    <a href="https://aqua.org/support/conservation">
+                      <span class="underline">
+                        <span class="text">CONSERVATION</span>
+                      </span>
+                    </a>
+                </nav>
+
+                <button id="top-toggle-search" type="button" >
+                  <span class="underline">
+                    <span class="text">
+                      <img src="images/search-icon.png" alt="" aria-hidden="true" width="16" height="16">
+                    </span>
+                  </span>
+                </button>
+            </div>
+        </section>
+
+
+<!-------------------------------
+ เริ่ม SECTION 2 Navbar ใหญ่ ที่มี logo
+--------------------------------->
+        <section class="principal">
+          <div class="lock">
+            <a class="home" href="#">
+              <img src="images/national-aquarium-logo.svg" alt="National Aquarium" width="340" height="33.39">
+            </a>
+
+            <button id="principal-toggle-search" type="button" >
+              <img src="images/search-icon.png" alt="">
+            </button>
+
+            <button id="toggle-menu">
+              <img src="images/menu-icon.png" alt="">
+            </button>
+
+            <div id="menu">
+              <button id="toggle-plan-your-visit">
+                <span class="underline">
+                  <span class="text">Visit</span>
+                </span>
+              </button>
+
+              <button id="toggle-explore" type="button">
+                <span class="underline">
+                  <span class="text">Explore</span>
+                </span>
+              </button>
+
+              <button id="toggle-support-our-mission">
+                <span class="underline">
+                  <span class="text">Support</span>
+                </span>
+              </button>
+
+              <a class="tickets" href="https://cart.aqua.org/webstore/shop/viewitems.aspx?cg=nai&c=ga">
+                <span>Buy&nbsp;</span>
+                <span>Tickets</span>
+              </a>
+            </div>
+          </div>
+        </section>
+    </header>
+
+<!----------------------------------
+ เริ่ม SECTION 3 page-content-wrapper
+------------------------------------>
+  <main class="page-content-wrapper">
+      <div class="title-section">
+          <div class="image-container">
+              <img src="images/yellow-fish.webp" >
+          </div>
+          <div class="content-overlay">
+              <h2>HOME  &nbsp;//</h2>
+              <h1>Explore</h1>
+          </div>
+      </div>
+
+
+      <div class="sidebar-container">
+          <button id="toggle-sidebar-anchors">
+              <span>DIVE DEEPER</span>
+              <span class="icon" ></span>
+          </button>
+
+          <nav id="sidebar-anchors" class="sidebar-nav" aria-labelledby="toggle-sidebar-anchors">
+              <a href="#exhibits">
+                  <span class="underline">
+                      <span class="text">Exhibits</span>
+                  </span>
+                  <span class="icon arrow-down" ></span>
+              </a>
+
+              <a href="#animals">
+                  <span class="underline">
+                      <span class="text">Animals</span>
+                  </span>
+                  <span class="icon arrow-down" ></span>
+              </a>
+
+              <a href="#livestreams">
+                  <span class="underline">
+                      <span class="text">Livestreams</span>
+                  </span>
+                   <span class="icon arrow-down" ></span>
+              </a>
+          </nav>
+      </div>
+  </main>
+
+
+<!--------------------------------------
+    เริ่ม SECTION 4 exhibits-section
+---------------------------------------->
+<section class="exhibits-section" id="exhibits">
+    <div class="exhibits-container">
+        <div class="exhibits-main">
+            <div class="exhibits-text-content">
+                <p class="medium-text">EXHIBITS</p>
+                <h2 class="section-heading">Explore Award-Winning Exhibits</h2>
+                <p class="section-description">
+                    Experience dozens of unique aquatic habitats—from a northern Australian river
+                    gorge to an Indo-Pacific reef to a tropical rain forest—all interconnected by the
+                    binding force of water.
+                </p>
+                <a href="https://aqua.org/explore/exhibits" class="button-ex button-outline">View All Exhibits</a>
+            </div>
+
+            <div class="exhibits-image-grid">
+                <div class="exhibit-card large-card-ex harbor-wetland">
+                    <div class="card-content">
+                        <h3>Harbor Wetland</h3>
+                        <p>Immerse yourself in a re-created salt marsh habitat like those that existed in Baltimore City hundreds of years ago.</p>
+                        <a href="#" class="button-ex button-learn">Learn More</a>
+                    </div>
+                </div>
+                <div class="exhibit-card small-card upland-rainforest odd"> 
+                <a href="https://aqua.org/explore/exhibits/upland-tropical-rain-forest">
+                  <span class="underline">
+                    <span class="card-name">Upland Tropical Rain Forest</span>
+                  </span>
+                </a>
+                </div>
+                <div class="exhibit-card small-card australia-wild ">
+                <a href="https://aqua.org/explore/exhibits/australia-wild-extremes"> 
+                  <span class="underline">
+                    <span class="card-name">Australia: Wild Extremes</span>
+                  </span>
+                </a> 
+                </div>
+                <div class="exhibit-card small-card blacktip-reef odd">
+                <a href="https://aqua.org/explore/exhibits/blacktip-reef">
+                  <span class="underline">
+                    <span class="card-name">Blacktip Reef</span>
+                  </span>
+                </a> 
+                </div>
+                <div class="exhibit-card small-card jellies-invasion"> 
+                <a href="https://aqua.org/explore/exhibits/jellies-invasion">
+                  <span class="underline">
+                    <span class="card-name">Jellies Invasion</span>
+                  </span>
+                </a> 
+                </div>
+                <div class="exhibit-card small-card shark-alley odd">
+                <a href="https://aqua.org/explore/exhibits/shark-alley">
+                  <span class="underline">
+                    <span class="card-name">Shark Alley</span> 
+                  </span>
+                </a> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-------------------------------------------
+    เริ่ม SECTION 5 tour-experience-section
+--------------------------------------------->
+<section class="tour-experience-section">
+    <div class="experience-section">
+        <div class="experience-container">
+            <div class="experience-info">
+                <div> <!-- Wrapper for text content -->
+                    <p class="section-subtitle">TOURS & EXPERIENCES</p>
+                    <h2>Experience the Aquarium Like Never Before</h2>
+                    <p>Experience a 4D movie, explore behind the scenes, meet our experts and come face to face with amazing animals.</p>
+                    <a href="#" class="btn-tours">View Tours & Experiences</a>
+                </div>
+                <!-- DESKTOP NAVIGATION MOVED FROM HERE -->
+            </div>
+
+            <div class="experience-carousel">
+                <div class="experience-card">
+                    <img src="images/touch-jelly.webp" alt="Hand touching jellyfish in a tank">
+                    <div class="experience-card-content">
+                        <p class="card-day">SATURDAY</p>
+                        <h3 class="card-title">Family Sunrise Tour</h3>
+                        <div class="experience-card-footer">
+                            <span class="card-date"><img src="images/calendar-icon.png" class="card-date-icon"> May 10, 2025</span>
+                            <span class="card-status-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <img src="images/insider-fish.JPG" alt="Close up of a surgeonfish">
+                    <div class="experience-card-content">
+                        <p class="card-day">SATURDAY</p>
+                        <h3 class="card-title">Insider's Tour</h3>
+                        <div class="experience-card-footer">
+                            <span class="card-date"><img src="images/calendar-icon.png" class="card-date-icon"> May 10, 2025</span>
+                            <span class="card-status-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <img src="images/vr-tour.webp" alt="Person in a VR experience chair">
+                    <div class="experience-card-content">
+                        <p class="card-day">SATURDAY</p>
+                        <h3 class="card-title">VR Experiences</h3>
+                        <div class="experience-card-footer">
+                           <span class="card-date"><img src="images/calendar-icon.png" class="card-date-icon"> May 10, 2025</span>
+                            <span class="card-status-icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DESKTOP NAVIGATION MOVED TO HERE -->
+                <div class="carousel-nav">
+                    <button class="prev-btn">‹</button>
+                    <button class="next-btn">›</button>
+                </div>
+
+                <div class="mobile-carousel-nav-container">
+                    <button class="mobile-carousel-next" aria-label="Next Item">›</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!---------------------------------
+    เริ่ม SECTION 6 animal-section
+----------------------------------->
+<section class="animal-section" id="animals">
+    <div class="animal-container">
+        <div class="animal-main">
+            <div class="animal-text-content">
+                <p class="medium-animal-text">FEATURED ANIMALS</p>
+                <h2 class="animal-section-heading">Thousands of Animals. Hundreds of Species. One Aquarium.</h2>
+                <p class="animal-section-description">
+                    Learn about animals from all over our blue planet—from 
+                    the depths of the ocean to the canopy of the rain 
+                    forest—and discover the connection they all share with water.
+                </p>
+                <a href="/" class="button-ani button-outline">Meet Our Animals</a>
+            </div>
+
+            <div class="animal-image-grid">
+                <div class="animal-card large-card-ani atlantic-puffin">
+                    <div class="animal-card-content">
+                        <h3>Atlantic Puffin</h3>
+                        <i>(Fratercula arctica)</i>
+                        <p>Atlantic puffins have a distinctive large, triangular red-orange bill with a blue-gray base and yellow ridge.</p>
+                        <a href="#" class="button-ani button-learn">Learn More</a>
+                    </div>
+                </div>
+                <div class="animal-card small-card blacktip2 odd"> 
+                <a href="https://aqua.org/explore/animals/blacktip-reef-shark">
+                  <span class="underline">
+                    <span class="animal-card-name">Blacktip Reef Shark
+                    </span>
+                    <i>(Carcharhinus melanopterus)</i>
+                  </span>
+                </a>
+                </div>
+                <div class="animal-card small-card blue-blubber">
+                <a href="https://aqua.org/explore/animals/blue-blubber-jelly"> 
+                  <span class="underline">
+                    <span class="animal-card-name">Blue Blubber Jelly</span>
+                  </span>
+                  <i>(Catostylus mosaicus)</i>
+                </a> 
+                </div>
+                <div class="animal-card small-card yellow-tang odd">
+                <a href="https://aqua.org/explore/animals/yellow-tang">
+                  <span class="underline">
+                    <span class="animal-card-name">Yellow Tang</span>
+                  </span>
+                  <i>(Zebrasoma flavescens)</i>
+                </a> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--------------------------------
+    เริ่ม SECTION 7 live-section
+---------------------------------->  
+
+<section class="live-section" id="livestreams">
+    <div class="live-container">
+        <div class="live-main">
+            <div class="live-text-content">
+                <p class="medium-live-text">LIVESREAM</p>
+                <h2 class="live-section-heading">Streaming Live From the National Aquarium</h2>
+                <p class="live-section-description">
+                    Tune in to our livestreams and enjoy the Aquarium no matter where you are!
+                </p>
+                <a href="https://aqua.org/explore/exhibits" class="button-live button-outline">Watch Livestreams</a>
+            </div>
+
+            <div class="live-image-grid">
+                <div class="live-card large-card-live blacktip-reef">
+                    <div class="live-card-content">
+                        <p>LIVE</p>
+                        <h3>Blacktip Reef</h3>
+                        <a href="#" class="button-live button-watch">Watch Now</a>
+                    </div>
+                </div>
+
+                <div class="live-card small-card pacific odd"> 
+                <p>LIVE</p>
+                <a href="">
+                  <span class="underline">
+                    <span class="live-card-name">Pacific Coral Reef</span>
+                  </span>
+                </a>
+                </div>
+
+                <div class=" live-card small-card jellies">
+                <p>LIVE</p>
+                <a href=""> 
+                  <span class="underline">
+                    <span class="live-card-name">Jellies Invasion</span>
+                  </span>
+                </a> 
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+
+
+<!--------------------------
+    เริ่ม FOOTER
+----------------------------> 
+<footer>
+    <section class="newsletter-signup">
+        <div class="container">
+            <p class="newsletter-eyebrow">SUBSCRIBE TO OUR NEWSLETTER</p>
+            <h2 class="newsletter-title">Sign up to receive updates on animals, news and events.</h2>
+            <a href="#" class="newsletter-button">Subscribe Today</a>
+        </div>
+    </section>
+    
+
+    <section class="site-footer">
+        <div class="mid-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/national-aquarium-logo-duotone-white.svg">
+                </div>
+                <div class="footer-text">
+                    <p>The National Aquarium is a private nonprofit organization that connects people with nature to inspire compassion and care for our ocean planet.</p>
+                </div>
+            </div>
+            <hr class="footer-divider">
+
+            <div class="footer-navigation">
+                <div class="footer-column">
+                    <h3 class="footer-heading">
+                        <span class="underline-foot">
+                            Education
+                        </span>
+                        <img src="images/bold-right.png" alt="" class="mobile-arrow">
+                    </h3>
+                    <ul class="footer-links-list">
+                            <li><a href="#"><span class="underline-foot">Field Trips</span></a><span class="list-item-arrow" aria-hidden="true">›</span></li>
+                            <li><a href="#"><span class="underline-foot">Teacher Programs</span></a><span class="list-item-arrow" aria-hidden="true">›</span></li>
+                            <li><a href="#"><span class="underline-foot">Student Programs</span></a><span class="list-item-arrow" aria-hidden="true">›</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">
+                        <span class="underline-foot">
+                            Stories
+                        </span>
+                        <img src="images/bold-right.png" alt="" class="mobile-arrow">                        
+                    </h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#"><span class="underline-foot">Series</span></a><span class="list-item-arrow" aria-hidden="true">›</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">
+                        <span class="underline-foot">
+                            About Us
+                        </span>
+                        <img src="images/bold-right.png" alt="" class="mobile-arrow">
+                    </h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#"><span class="underline-foot">Join Our Team</span></a><span class="list-item-arrow" aria-hidden="true">›</span></li>
+                        <li><a href="#"><span class="underline-foot">Meet Our Team</span></a><span class="list-item-arrow" aria-hidden="true">›</span></li>
+                        <li><a href="#"><span class="underline-foot">Our DEIJ Commitment</span></a><span class="list-item-arrow" aria-hidden="true">›</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">
+                        <span class="underline-foot">
+                            Contact Us
+                        </span>
+                        <img src="images/bold-right.png" alt="" class="mobile-arrow">
+                    </h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#"><span class="underline-foot">Plan an Event at the Aquarium</span></a><span class="list-item-arrow" aria-hidden="true">›</span></li>
+                        <li><a href="#"><span class="underline-foot">Newsroom</span></a><span class="list-item-arrow" aria-hidden="true">›</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column footer-actions">
+                    <a href="#" class="footer-button footer-button-primary">Buy Tickets</a>
+                    <a href="#" class="footer-button footer-button-secondary">Give Today</a>
+                    <ul class="social-icons">
+                        <li><a href="#" aria-label="Facebook">
+                            <img src="images/facebook.png" alt="">
+                        </a></li>
+                        <li><a href="#" aria-label="Instagram">
+                            <img src="images/instagram.png" alt="">
+                        </a></li>
+                        <li><a href="#" aria-label="Twitter">
+                            <img src="images/twitter.png" alt="">
+                        </a></li>
+                        <li><a href="#" aria-label="YouTube">
+                            <img src="images/youtube.png" alt="">
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="bottom-bar">
+        <div class="last-container">
+            <div class="bottom-bar-content">
+                <span class="bottom-bar-item lang-links">
+                    <a href="#"><span class="underline-foot">Guía del Visitante</span></a>
+                    <a href="#"><span class="underline-foot">游客指南</span></a>
+                </span>
+                <span class="bottom-bar-item">© 2025 National Aquarium</span>
+                <span class="desktop-separator">|</span> 
+                <span class="bottom-bar-item">
+                    <a href="#"><span class="underline-foot">Privacy and Security Policy</span></a>
+                </span>
+                <span class="desktop-separator">|</span> 
+                <span class="bottom-bar-item">501 E. Pratt St., Baltimore, MD 21202</span>
+            </div>
+        </div>
+    </div>  
+  </section>
+</footer>
+
+</html>
