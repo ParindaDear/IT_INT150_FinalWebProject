@@ -12,4 +12,5 @@
 Project นี้เป็นการ **Clone Website ต้นฉบับ** คือ  [National Aquarium](https://aqua.org)  
 โดยมีวัตถุประสงค์เพื่อศึกษาและออกแบบการจัดวาง Layout  
 ของหน้าเว็บไซต์ โดยใช้เทคนิค **CSS Grid** และ **Flexbox** 
+โดยได้จัดทำ Responsive 2 ขนาดคือ Mobile และ Desktop
 
